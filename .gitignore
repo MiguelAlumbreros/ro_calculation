@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+build/
+dist/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local Claude settings and instructions
+.claude
+.claude/settings.local.json
+CLAUDE.md
+
+# Market data. Here only futures.csv is versioned; the PFCs, the trading calendar and
+# the local inputs sheet are not. The consultant copy versions its whole data/ folder,
+# so that copy runs from a fresh clone. The regulatory sheets live in
+# src/ro_calculation/data/, which these patterns deliberately do not touch.
+/data/*
+!/data/futures.csv
+input/
+
+# Generated workbooks and component/summary exports
+output/
+
+# BOE source documents: large and public. docs/boe/boe_guide.txt lists what each one
+# holds, and they are readable at boe.es.
+/docs/boe/**/*.pdf
+/docs/boe/**/*.html

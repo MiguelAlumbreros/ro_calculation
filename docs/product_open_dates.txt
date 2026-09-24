@@ -1,0 +1,14 @@
+Power:
+    Pfanualn: Calculado como la media aritmética de los precios de cierre («settlement price») de los futuros anuales sobre electricidad española con carga base, con liquidación en el año «n», 
+        cuando: desde el 1 de junio al 20 de diciembre del año «n-1», ambos incluidos.
+    Pftrimn,k: precio medio del futuro trimestral de OMIP con liquidación en el trimestre «k» del año «n», expresado en €/MWhE y calculado como la media aritmética de los precios  de  cierre  («settlement  price»)  de  los  futuros  trimestrales  sobre  electricidad española con carga base, con liquidación en el trimestre «k» del año «n»
+        cuando: desde el día 1 del primer mes del trimestre «k-1» hasta el día 20 del último mes del trimestre «k-1», ambos incluidos.
+    Pfmenn,k,l: precio medio del futuro mensual de OMIP con liquidación en el mes «l» del  trimestre  «k»  del  año  «n»,  expresado  en  €/MWhE  y  calculado  como  la  media aritmética de los precios de cierre («settlement price») de los futuros mensuales sobre electricidad española con carga base, con liquidación en el mes «l» del trimestre «k» del año «n», 
+        cuando: desde el día 1 hasta el día 20 del último mes del trimestre «k-1», ambos incluidos.
+
+Gas:
+    Lo mismo que power.
+
+EUA:
+    Expresado en €/tCO2, se calculará como la media aritmética de las cotizaciones de los contratos de futuros del tercer mes del trimestre «k» del año «n» de derechos de emisión de CO2 negociados 
+    cuando: desde el día 1 del primer mes del trimestre «k-1» hasta el día 20 del último mes del trimestre «k-1», ambos incluidos.

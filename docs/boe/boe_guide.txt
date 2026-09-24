@@ -1,0 +1,28 @@
+The PDFs themselves are kept locally and are not in the repo (they are large and
+public). Read any of them at https://www.boe.es/diario_boe/txt.php?id=<BOE-id>.
+
+1. BOE-A-2024-11291: Gives you the methodology and the constants for 2024-25 for the RO.
+   Arts. 10-13 = the RO formulas. Anexo I.A = valores propios 2024-25.
+
+2. BOE-A-2023-15833: Gives you the Rinv for 2024-25
+   Anexo II. For IT-01144 it is 0 EUR/MW (genuinely zero, not missing).
+
+3. BOE-A-2026-2476 (Orden TED/53/2026, parametros retributivos): Rinv and constants
+   for 2026-27-28. The live source for ro_parameters.xlsx, the valores propios sheet
+   shipped in src/ro_calculation/data/.
+   Anexo IV  = Rinv (one value for all 3 years). IT-01144 -> 15.520 EUR/MW.
+   Anexo X.A = valores propios per year (VC, CO&MyOtros, VCO2, VIVPEE-RI, VAC,
+               VHV, VHF, INE, Potros). The 2026 row is what the 2026 quarters use.
+   Anexo II  = list of all instalacion tipo codes, to find yours.
+
+4. realised_ro/: the published RO, one resolution per quarter.
+   ro_26q1 = BOE-A-2026-226, ro_26q2 = BOE-A-2026-7426,
+   ro_26q3 = BOE-A-2026-14552. Transcribed into ro_realised.xlsx, shipped in
+   src/ro_calculation/data/.
+
+5. IVPEE/: the RDLs that set the IVPEE rate. IVPEE_rate_history.md is the legal
+   basis for each row of IVPEE.xlsx, also shipped in src/ro_calculation/data/.
+
+Warning: the annex tables do not extract cleanly. In BOE-A-2024-11291 (Anexo I.A)
+and BOE-A-2026-2476 (Anexo IV), pdftotext puts the numbers next to the wrong
+instalacion tipo. Check any value you pull out against a second row you know.

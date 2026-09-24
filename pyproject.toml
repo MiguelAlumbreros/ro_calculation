@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ro-calculation"
+version = "0.1.0"
+description = "Regulated Retribución a la Operación (RO) for Spanish cogeneration installation types"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=3.0",
+    "numpy>=2.4",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+notebooks = [
+    "ipykernel>=7.2",
+    "requests",
+    "beautifulsoup4",
+]
+
+[project.scripts]
+ro-calculation = "ro_calculation.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ro_calculation = ["data/*.xlsx"]
